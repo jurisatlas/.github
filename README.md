@@ -26,12 +26,18 @@ Each package includes a graphical setup utility that allows practitioners to sel
 
 The installer creates an isolated Python runtime inside the extracted folder and registers the read-only MCP server entry only in the client configuration files you select, without accessing or modifying personal files.
 
-### Interactive Command-Line Setup (`uvx` / Terminal — No Git Required)
+### Interactive Setup Wizard (GUI & CLI — No Git Required)
 
-Paste the single command below into your terminal or PowerShell. It opens an **interactive prompt** asking **which country (or countries)** you want to install and **which AI application(s)** you use (**Claude Desktop, Claude Code CLI, ChatGPT Desktop, OpenAI Codex CLI, Cursor, Windsurf, VS Code / GitHub Copilot, Cline, Google Antigravity / Gemini CLI, Perplexity, Continue.dev, LM Studio**), then configures them automatically without requiring Git:
+Paste the single command below into your terminal or PowerShell. It opens an **interactive setup window** (with an automatic terminal `--cli` fallback in headless environments) allowing you to select **one, multiple, or all 42 jurisdictions** and **which AI application(s)** you use (**Claude Desktop, Claude Code CLI, ChatGPT Desktop, OpenAI Codex CLI, Cursor, Windsurf, VS Code / GitHub Copilot, Cline, Roo Code, Google Antigravity / Gemini CLI, Perplexity, Continue.dev, LM Studio**), then configures them automatically without requiring Git:
 
 ```bash
-uvx --from https://github.com/jurisatlas/cli/archive/refs/heads/main.zip jurisatlas
+uvx --refresh --from https://github.com/jurisatlas/cli/archive/refs/heads/main.zip jurisatlas
+```
+
+To force terminal mode (type `a` or `all` to select all 42 countries), append `--cli`:
+
+```bash
+uvx --refresh --from https://github.com/jurisatlas/cli/archive/refs/heads/main.zip jurisatlas --cli
 ```
 
 Or if you do not have `uv` installed yet:

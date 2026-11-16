@@ -15,4 +15,4 @@ if (-not $UvExe) {
     $UvExe = "$env:USERPROFILE\.local\bin\uvx.exe"
 }
 
-& $UvExe --from https://github.com/jurisatlas/cli/archive/refs/heads/main.zip jurisatlas
+& $UvExe --refresh --from https://github.com/jurisatlas/cli/archive/refs/heads/main.zip jurisatlas @args
